@@ -9,6 +9,8 @@ git add .
 git commit -m 'auto commit'
 echo ""
 echo "wait 1 hour"
+PLAN=`date -v+1H +"%Y/%m/%d %r"`
+echo "next commit is $PLAN"
 echo ""
 C=40
 A=0
@@ -47,6 +49,8 @@ do
 		git commit -m 'auto commit'
 		echo ""
 		echo "wait 1 hour"
+        PLAN=`date -v+1H +"%Y/%m/%d %r"`
+        echo "next commit is $PLAN"
 		echo ""
 		# commit per 1hour
 	done
@@ -80,6 +84,8 @@ do
 	git commit -m 'auto commit'
 	echo ""
 	echo "wait 1 hour"
+    PLAN=`date -v+1H +"%Y/%m/%d %r"`
+    echo "next commit is $PLAN"
 	echo ""
 	cd path
 	git push origin master 
